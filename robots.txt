@@ -1,0 +1,93 @@
+# robots.txt — IIT Madras MLOps Course (iitmbsmlops.github.io)
+# This site publishes openly-licensed educational content for the MLOps course
+# of the IIT Madras Online BS Degree in Data Science and Applications.
+# Crawling and indexing are welcome. Attribution requested:
+#   "IIT Madras BS Programme — MLOps Course (https://iitmbsmlops.github.io/)"
+
+User-agent: *
+Allow: /
+Disallow:
+
+# Search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+# AI / LLM crawlers — explicitly allowed so this course shows up
+# in AI assistants when users ask about MLOps.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: DiffbotBot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: MistralAI-User
+Allow: /
+
+# Sitemap
+Sitemap: https://iitmbsmlops.github.io/sitemap.xml

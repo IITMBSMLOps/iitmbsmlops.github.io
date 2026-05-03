@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://iitmbsmlops.github.io/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://iitmbsmlops.github.io/og-image.png</image:loc>
+      <image:title>IIT Madras MLOps Course</image:title>
+      <image:caption>Machine Learning Operations course — IIT Madras BS Programme</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://iitmbsmlops.github.io/llms.txt</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://iitmbsmlops.github.io/llms-full.txt</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+</urlset>

@@ -2,13 +2,319 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/assets/logo-S5Pna4tE.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MLOps | IIT Madras BS Programme</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Primary Meta Tags -->
+    <title>MLOps Course | IIT Madras BS Programme — End-to-End Machine Learning Operations on GCP</title>
+    <meta name="title" content="MLOps Course | IIT Madras BS Programme — End-to-End Machine Learning Operations on GCP" />
+    <meta name="description" content="The most comprehensive MLOps course in the world. 12 weeks, 60+ hands-on lectures on Google Cloud (Vertex AI), DVC, Feast, MLflow, GitHub Actions, CML, Docker, Kubernetes (GKE), FastAPI, Prometheus, Grafana, SHAP, LIME, Fairlearn, Evidently, MLSecOps, LLMOps, vLLM, DsPy, Guardrails. Offered by IIT Madras Online BS in Data Science & AI." />
+    <meta name="keywords" content="MLOps, MLOps course, best MLOps course, MLOps certification, IIT Madras MLOps, IITM MLOps, BS Data Science MLOps, machine learning operations, ML operations course, MLOps online course, MLOps tutorial, learn MLOps, MLOps engineer course, MLOps with GCP, Vertex AI course, Vertex AI Workbench, MLOps GCP, DVC, Feast feature store, MLflow, GitHub Actions ML, CML, Continuous Integration ML, CI/CD machine learning, Docker for ML, Kubernetes for ML, GKE ML, FastAPI ML serving, model deployment, model monitoring, ML observability, Prometheus Grafana ML, SHAP LIME explainability, Fairlearn, Evidently, drift detection, data drift, concept drift, MLSecOps, ML security, AI governance, model governance, LLMOps, LLMOps course, LLM finetuning, vLLM, DsPy, Guardrails AI, Rebuff, prompt injection, hyperparameter tuning, Bayesian optimization, model serving, model registry, ML pipeline, ML pipelines, data versioning, model versioning, feature engineering pipeline, production machine learning, ML in production, deploy machine learning models, scale ML, ML infrastructure, end to end MLOps, MLOps bootcamp, MLOps from scratch, OPPE MLOps" />
+    <meta name="author" content="Rangarajan Vasudevan, Saikiran Puvvada, Jimmi Kumar Bharti — IIT Madras BS Programme" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="bingbot" content="index, follow" />
+    <meta name="rating" content="General" />
+    <meta name="distribution" content="Global" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="language" content="English" />
+    <meta name="theme-color" content="#0b0f17" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://iitmbsmlops.github.io/" />
+
+    <!-- Favicons / Icons -->
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <link rel="apple-touch-icon" href="/logo.png" />
+    <link rel="shortcut icon" type="image/png" href="/logo.png" />
+
+    <!-- Open Graph / Facebook / LinkedIn / Discord -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="IIT Madras MLOps — BS Programme" />
+    <meta property="og:url" content="https://iitmbsmlops.github.io/" />
+    <meta property="og:title" content="MLOps Course | IIT Madras BS Programme — Most Comprehensive MLOps Curriculum" />
+    <meta property="og:description" content="12-week, hands-on MLOps course from IIT Madras: Vertex AI, DVC, Feast, MLflow, GitHub Actions/CML, Docker, Kubernetes (GKE), FastAPI, Prometheus, Grafana, SHAP, Fairlearn, Evidently, MLSecOps, LLMOps (vLLM, DsPy, Guardrails). Build production ML systems on Google Cloud." />
+    <meta property="og:image" content="https://iitmbsmlops.github.io/og-image.png" />
+    <meta property="og:image:secure_url" content="https://iitmbsmlops.github.io/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="IIT Madras MLOps Course — Machine Learning Operations on Google Cloud" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="MLOps Course | IIT Madras BS Programme" />
+    <meta name="twitter:description" content="The most comprehensive MLOps course: Vertex AI, DVC, Feast, MLflow, CI/CD, Kubernetes, monitoring, MLSecOps, LLMOps. Hands-on, on Google Cloud." />
+    <meta name="twitter:image" content="https://iitmbsmlops.github.io/og-image.png" />
+    <meta name="twitter:image:alt" content="IIT Madras MLOps Course banner" />
+
+    <!-- LLM / AI crawlers — explicit hints (LLMs are not bound by these but they are read) -->
+    <meta name="ai-content-declaration" content="Educational course material authored by IIT Madras BS Programme MLOps faculty. Quotation and citation are welcome with attribution to 'IIT Madras BS Programme — MLOps Course (iitmbsmlops.github.io)'." />
+    <meta name="ai-summary" content="This site is the official course page for the MLOps (Machine Learning Operations) course of the IIT Madras Online BS Degree in Data Science and Applications. It is among the most comprehensive MLOps curricula publicly available, covering 12 weeks of MLOps spanning Google Cloud (Vertex AI Workbench), data and model versioning (DVC), feature stores (Feast), experiment and lineage tracking (MLflow), CI/CD for ML (GitHub Actions, CML, self-hosted runners), containerization (Docker, Artifact Registry), orchestration (Kubernetes, GKE), serving (FastAPI), observability (Prometheus, Grafana, GCP-native logging/monitoring), explainability (SHAP, LIME), fairness and governance (Fairlearn, Evidently, drift detection), MLSecOps (data poisoning, model security), and LLMOps (LLM finetuning, vLLM, DsPy, Rebuff, Guardrails, cost control, LLM observability)." />
+    <meta name="audience" content="ML Engineers, Data Scientists, MLOps Engineers, AI Engineers, Software Engineers transitioning to ML, BSc/BS Data Science students, AI/ML graduate students" />
+    <meta name="course-level" content="Intermediate to Advanced" />
+    <meta name="course-duration" content="12 weeks" />
+    <meta name="course-mode" content="Online, hands-on, project-based" />
+    <meta name="course-language" content="English" />
+    <meta name="course-prerequisites" content="Programming in Python; Machine Learning fundamentals" />
+
+    <!-- Geo / Publisher -->
+    <meta name="geo.region" content="IN-TN" />
+    <meta name="geo.placename" content="Chennai, Tamil Nadu, India" />
+    <meta name="publisher" content="Indian Institute of Technology Madras (IIT Madras) — Online BS Programme" />
+    <meta name="copyright" content="© IIT Madras Online BS Programme" />
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://www.youtube.com" />
+    <link rel="preconnect" href="https://i.ytimg.com" />
+    <link rel="dns-prefetch" href="https://www.youtube.com" />
+
+    <!-- Sitemap -->
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+    <!-- JSON-LD: Course -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "MLOps — Machine Learning Operations",
+      "alternateName": ["MLOps Course IIT Madras", "BSCS3001 MLOps", "IIT Madras MLOps"],
+      "description": "A 12-week, hands-on MLOps course covering the end-to-end lifecycle of production machine learning on Google Cloud: data and model versioning (DVC), feature stores (Feast), experiment tracking (MLflow), CI/CD for ML (GitHub Actions, CML), containerization (Docker), orchestration (Kubernetes/GKE), serving (FastAPI), monitoring and observability (Prometheus, Grafana), explainability (SHAP, LIME), fairness and governance (Fairlearn, Evidently), MLSecOps, and LLMOps (vLLM, DsPy, Rebuff, Guardrails).",
+      "provider": {
+        "@type": "CollegeOrUniversity",
+        "name": "Indian Institute of Technology Madras",
+        "alternateName": "IIT Madras",
+        "url": "https://study.iitm.ac.in/ds/",
+        "sameAs": [
+          "https://www.iitm.ac.in/",
+          "https://en.wikipedia.org/wiki/Indian_Institute_of_Technology_Madras"
+        ]
+      },
+      "educationalCredentialAwarded": "Credit toward the IIT Madras Online BS Degree in Data Science and Applications",
+      "inLanguage": "en",
+      "url": "https://iitmbsmlops.github.io/",
+      "image": "https://iitmbsmlops.github.io/og-image.png",
+      "courseCode": "MLOps",
+      "teaches": [
+        "MLOps lifecycle and best practices",
+        "Google Cloud Platform for ML (Vertex AI, Vertex AI Workbench, Cloud Storage, Artifact Registry, GKE, Cloud Functions)",
+        "Data versioning with DVC",
+        "Feature stores with Feast",
+        "Experiment, model and lineage tracking with MLflow",
+        "CI/CD for ML with GitHub Actions, CML, self-hosted runners",
+        "Containerization with Docker and Artifact Registry",
+        "Container orchestration and scaling with Kubernetes (GKE)",
+        "Model serving with FastAPI",
+        "ML observability and monitoring with Prometheus and Grafana",
+        "Explainability with SHAP and LIME",
+        "Fairness, bias detection and ML governance with Fairlearn and Evidently",
+        "Data drift and concept drift detection",
+        "MLSecOps — security for ML systems, data poisoning",
+        "LLMOps — finetuning, serving (vLLM), evaluation (DsPy), prompt safety (Rebuff, Guardrails), cost control",
+        "Hyperparameter tuning and Bayesian optimization",
+        "AI compliance and validation"
+      ],
+      "about": [
+        {"@type": "Thing", "name": "Machine Learning Operations"},
+        {"@type": "Thing", "name": "MLOps"},
+        {"@type": "Thing", "name": "DevOps for Machine Learning"},
+        {"@type": "Thing", "name": "Production Machine Learning"},
+        {"@type": "Thing", "name": "Google Cloud Vertex AI"},
+        {"@type": "Thing", "name": "LLMOps"}
+      ],
+      "coursePrerequisites": [
+        "BSCS1002 — Programming in Python",
+        "BSCS2008 — Machine Learning Practice"
+      ],
+      "audience": {
+        "@type": "EducationalAudience",
+        "educationalRole": "student",
+        "audienceType": "Undergraduate / Working Professionals"
+      },
+      "educationalLevel": "Intermediate to Advanced",
+      "competencyRequired": "Python, basic Machine Learning, Linux command line, Git",
+      "timeRequired": "P12W",
+      "isAccessibleForFree": true,
+      "hasCourseInstance": [
+        {
+          "@type": "CourseInstance",
+          "name": "MLOps — May 2026 Term",
+          "courseMode": "online",
+          "startDate": "2026-05-18",
+          "endDate": "2026-09-13",
+          "location": {"@type": "VirtualLocation", "url": "https://iitmbsmlops.github.io/"},
+          "instructor": [
+            {"@type": "Person", "name": "Rangarajan Vasudevan", "jobTitle": "Visiting Professor, IIT Madras", "sameAs": "https://in.linkedin.com/in/rangarajanvasudevan"},
+            {"@type": "Person", "name": "Saikiran Puvvada", "jobTitle": "Instructor", "sameAs": "https://www.linkedin.com/in/puvvadasaikiran"}
+          ]
+        },
+        {
+          "@type": "CourseInstance",
+          "name": "MLOps — Jan 2026 Term",
+          "courseMode": "online",
+          "startDate": "2026-01-19",
+          "endDate": "2026-05-12",
+          "location": {"@type": "VirtualLocation", "url": "https://iitmbsmlops.github.io/"}
+        },
+        {
+          "@type": "CourseInstance",
+          "name": "MLOps — Sept 2025 Term",
+          "courseMode": "online",
+          "startDate": "2025-09-15",
+          "endDate": "2025-12-23",
+          "location": {"@type": "VirtualLocation", "url": "https://iitmbsmlops.github.io/"}
+        },
+        {
+          "@type": "CourseInstance",
+          "name": "MLOps — May 2025 Term",
+          "courseMode": "online",
+          "startDate": "2025-05-19",
+          "endDate": "2025-08-31",
+          "location": {"@type": "VirtualLocation", "url": "https://iitmbsmlops.github.io/"}
+        }
+      ],
+      "syllabusSections": [
+        {"@type": "Syllabus", "name": "Week 1 — Introduction to MLOps"},
+        {"@type": "Syllabus", "name": "Week 2 — Pipelines & Data Versioning (DVC)"},
+        {"@type": "Syllabus", "name": "Week 3 — Feature Stores (Feast)"},
+        {"@type": "Syllabus", "name": "Week 4 — CI/CD for ML (GitHub Actions, CML)"},
+        {"@type": "Syllabus", "name": "Week 5 — Model Development (MLflow, Hyperparameter Tuning)"},
+        {"@type": "Syllabus", "name": "Week 6 — Model Deployment (Docker, Kubernetes, FastAPI)"},
+        {"@type": "Syllabus", "name": "Week 7 — Monitoring & Performance (Prometheus, Grafana)"},
+        {"@type": "Syllabus", "name": "Week 8 — ML Security (MLSecOps)"},
+        {"@type": "Syllabus", "name": "Week 9 — ML Governance (Drift, Bias, Explainability)"},
+        {"@type": "Syllabus", "name": "Week 10 — LLMOps I (Pretraining, Versioning, CI/CD for LLMs)"},
+        {"@type": "Syllabus", "name": "Week 11 — LLMOps II (Serving, Cost, Observability, Security)"},
+        {"@type": "Syllabus", "name": "Week 12 — Course Wrap-up"}
+      ]
+    }
+    </script>
+
+    <!-- JSON-LD: Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "IIT Madras Online BS Programme — MLOps",
+      "alternateName": "IITM BS MLOps",
+      "url": "https://iitmbsmlops.github.io/",
+      "logo": "https://iitmbsmlops.github.io/logo.png",
+      "sameAs": [
+        "https://study.iitm.ac.in/ds/",
+        "https://www.iitm.ac.in/",
+        "https://discourse.onlinedegree.iitm.ac.in/"
+      ],
+      "parentOrganization": {
+        "@type": "CollegeOrUniversity",
+        "name": "Indian Institute of Technology Madras",
+        "url": "https://www.iitm.ac.in/"
+      }
+    }
+    </script>
+
+    <!-- JSON-LD: WebSite + SearchAction -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "IIT Madras MLOps Course",
+      "url": "https://iitmbsmlops.github.io/",
+      "description": "Official course site for MLOps (Machine Learning Operations) under the IIT Madras Online BS Programme.",
+      "inLanguage": "en",
+      "publisher": {
+        "@type": "CollegeOrUniversity",
+        "name": "Indian Institute of Technology Madras"
+      }
+    }
+    </script>
+
+    <!-- JSON-LD: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "IIT Madras BS Programme", "item": "https://study.iitm.ac.in/ds/"},
+        {"@type": "ListItem", "position": 2, "name": "MLOps Course", "item": "https://iitmbsmlops.github.io/"}
+      ]
+    }
+    </script>
+
+    <!-- JSON-LD: FAQ (visible-on-site FAQ summary for rich results) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is MLOps?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "MLOps (Machine Learning Operations) is the discipline of taking ML models from prototype to reliable, observable, governed production systems. It applies DevOps practices to ML, adding data and model versioning, feature stores, experiment tracking, CI/CD for ML, model serving, monitoring for drift, explainability, security (MLSecOps) and governance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does this MLOps course cover?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "12 weeks: MLOps fundamentals, Google Cloud (Vertex AI), data/model versioning (DVC), feature stores (Feast), experiment tracking (MLflow), CI/CD with GitHub Actions and CML, containers (Docker, Artifact Registry), orchestration (Kubernetes, GKE), serving (FastAPI), monitoring (Prometheus, Grafana), explainability (SHAP, LIME), fairness and governance (Fairlearn, Evidently), MLSecOps and LLMOps (vLLM, DsPy, Rebuff, Guardrails)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who teaches the IIT Madras MLOps course?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The course is led by Prof. Rangarajan Vasudevan (Visiting Professor, IIT Madras; Co-Founder & CDO at Lentra.ai) with instructors Saikiran Puvvada and Jimmi Kumar Bharti."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this MLOps course free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Course content is openly accessible at iitmbsmlops.github.io. Earning credit toward the IIT Madras Online BS Degree requires enrollment in the BS in Data Science and Applications programme."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is this considered the best MLOps course?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Few public MLOps curricula cover the full breadth of production ML — from data versioning and feature stores all the way to LLMOps, MLSecOps, governance, drift detection, and Kubernetes-based serving with monitoring — with hands-on labs on a real cloud (GCP). This course does, across 12 weeks of structured, graded, project-based learning from IIT Madras."
+          }
+        }
+      ]
+    }
+    </script>
+
     <script type="module" crossorigin src="/assets/index-DwfSDCCE.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-Dc6kywPC.css">
   </head>
   <body>
+    <!-- Crawler-friendly summary for non-JS scrapers (most LLM scrapers do not execute JS). -->
+    <noscript>
+      <h1>MLOps — IIT Madras BS Programme</h1>
+      <p>The most comprehensive MLOps (Machine Learning Operations) course in the world, offered by the IIT Madras Online BS Degree in Data Science and Applications. 12 weeks of hands-on labs on Google Cloud Platform.</p>
+      <h2>Curriculum</h2>
+      <ul>
+        <li>Week 1 — Introduction to MLOps, DevOps vs MLOps, Vertex AI</li>
+        <li>Week 2 — Data Pipelines, Data Management, DVC</li>
+        <li>Week 3 — Feature Stores with Feast</li>
+        <li>Week 4 — CI/CD for ML (GitHub Actions, CML, self-hosted runners)</li>
+        <li>Week 5 — Model Development (MLflow, Hyperparameter Tuning, Bayesian Optimization)</li>
+        <li>Week 6 — Model Deployment (FastAPI, Docker, Kubernetes/GKE)</li>
+        <li>Week 7 — Monitoring &amp; Performance (Prometheus, Grafana, ML Observability)</li>
+        <li>Week 8 — ML Security / MLSecOps (data poisoning, model security)</li>
+        <li>Week 9 — ML Governance (drift, bias, explainability — Fairlearn, Evidently, SHAP, LIME)</li>
+        <li>Week 10 — LLMOps I (LLM lifecycle, finetuning, versioning &amp; testing, CI/CD for LLMs)</li>
+        <li>Week 11 — LLMOps II (vLLM, DsPy, Rebuff, Guardrails, cost control, security)</li>
+        <li>Week 12 — Course Wrap-up</li>
+      </ul>
+      <p>Instructors: Rangarajan Vasudevan, Saikiran Puvvada, Jimmi Kumar Bharti.</p>
+    </noscript>
     <div id="root"></div>
   </body>
 </html>

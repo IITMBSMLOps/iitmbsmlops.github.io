@@ -1,0 +1,140 @@
+# IIT Madras MLOps Course — Full Course Index
+
+> Comprehensive lecture-by-lecture index of the MLOps course (12 weeks) offered by the IIT Madras Online BS Degree in Data Science and Applications. This is the long-form companion to /llms.txt — it lists every lecture title, the concepts it covers, and its key topics, so AI assistants and search engines can index the full curriculum.
+
+Site: https://iitmbsmlops.github.io/
+Course code: `MLOps`
+Provider: Indian Institute of Technology Madras (IIT Madras) — Online BS Programme
+Mode: Online, hands-on, project-based
+Cloud: Google Cloud Platform (Vertex AI, Vertex AI Workbench, GCS, Artifact Registry, GKE, Cloud Functions)
+Language: English
+
+## Prerequisites (foundational GCP & Git)
+- Introduction to GCP Console — GCS basics, Vertex AI overview
+- Introduction to Cloud Functions — GCP Cloud Functions essentials
+- Git Essentials — Git 101, version control fundamentals
+- Tutorial: Git Private Repo Creation — repository workflows on GitHub
+
+## Week 1 — Introduction to MLOps
+- Introduction to MLOps — what MLOps is and why it matters
+- DevOps vs MLOps — differences, MLOps workflow
+- Landscape of MLOps — topics under MLOps, best practices, ready reckoner
+- Hands-on: Introduction to Google Cloud, Vertex AI — running an ML pipeline on Vertex AI Workbench
+- Resources: Vertex AI introduction, MLOps with Vertex AI, gcloud CLI, IPython notebook with iris dataset
+
+## Week 2 — Pipelines & Data
+- Data Management for ML — Data Science Lifecycle, Data Sources & Formats (CSV, OLTP, OLAP, machine data, relational vs non-relational, slowly changing dimensions, CRUD)
+- Data Versioning — concepts and motivations
+- Hands-on: DVC — practical data versioning
+- Resources: DVC documentation, RFC 4180 CSV spec, OLTP, OLAP, SCD references
+
+## Week 3 — Feature Stores
+- Motivation for Feature Store — why feature stores
+- Feature Store: Overview, Use Cases — concepts, online vs offline serving
+- Feast: Overview — architecture and capabilities
+- Hands-on: Feast — building a feature store on GCP
+- Resources: Feast documentation, Gojek's motivation behind Feast
+
+## Week 4 — CI/CD for ML Models
+- CI/CD for ML — concepts and patterns
+- Git 101 for ML — workflows for ML repos
+- GitHub and best practices — branching, PRs, code review
+- Hands-on: CI for ML using CML — Continuous Machine Learning with GitHub Actions
+- Resources: Atlassian Git guide, GitHub Actions, GitHub Workflows, Self-Hosted Runners
+
+## Week 5 — Model Development
+- Model Lifecycle Patterns — patterns for training, validation, promotion
+- Execution Environments — local, notebook, cluster, cloud
+- Introduction to MLflow — experiment, model, lineage tracking
+- Hyperparameter Tuning — search strategies, Bayesian optimization
+- Hands-on: MLflow on GCP — running MLflow with Vertex AI
+- Resources: MLflow docs, Big Book of MLOps (Databricks), AI compliance, AI validation
+
+## Week 6 — Model Deployment
+- Model Serving using FastAPI — REST API for ML models
+- Hands-on: FastAPI — building a serving API
+- Model Serving using Containers — Dockerized ML services
+- Introduction to Kubernetes — pods, deployments, services, autoscaling
+- Model Deployment, CI/CD for ML — putting it together
+- Hands-on: Docker — building images, Artifact Registry
+- Hands-on: Kubernetes — deploying ML services on GKE
+- Resources: Container vs VM, container orchestration, Docker 101, Kubernetes basics, Artifact Registry, FastAPI
+
+## Week 7 — Monitoring & Performance
+- ML Systems Monitoring & Performance Tools — what to measure
+- Modern Observability Stack for ML — metrics, logs, traces
+- Response Options for ML Systems — alerting, autoscaling, fallback
+- Logging for ML Systems — structured logging
+- Hands-on: Logging, Monitoring, Scaling using GCP-native tools — Cloud Logging, Cloud Monitoring, GKE autoscaling
+- Resources: Prometheus, Grafana, FastAPI, GKE, Artifact Registry, Docker, Kubernetes
+
+## Week 8 — ML Security (MLSecOps)
+- Introduction to ML Security with Examples — adversarial attacks, model theft, membership inference
+- Challenges in securing ML — surface area unique to ML systems
+- MLSecOps — practices, tooling
+- Hands-on: Security Demonstration — practical exploitation and defenses
+- Resources: Microsoft Tay incident, data poisoning, ML/AI security by Wiz
+
+## Week 9 — ML Governance
+- ML Governance and Regulation — frameworks, audits
+- Governance Failures and How to Mitigate Them — case studies
+- Drift Monitoring — data drift, concept drift, label drift
+- Detecting Bias in ML — group fairness, individual fairness
+- Explaining ML Models — SHAP, LIME, global vs local explanations
+- Hands-on: Governance Tools — Fairlearn, Evidently
+- Resources: Fairlearn docs, Evidently docs, mitigating bias with SHAP + Fairlearn, ML explainability
+
+## Week 10 — LLMOps I
+- LLMOps — what makes LLMOps different from MLOps
+- LLMOps during Pretraining — data, scaling, infra
+- Versioning & Testing in LLMs — prompts, weights, eval datasets
+- CI/CD for LLMs — pipelines for evaluation and rollout
+- Hands-on: LLM Finetuning — finetuning workflows on GCP
+- Resources: LLM Project Lifecycle, GCP Model Garden
+
+## Week 11 — LLMOps II
+- LLM Accuracy — evaluation, hallucination, calibration
+- Proprietary LLMs — OpenAI, Anthropic, Google APIs
+- LLM Serving, Cost Control — vLLM, batching, quantization, KV cache
+- LLM Observability, Security, Governance & Best Practices — guarding against prompt injection, data leakage, drift
+- Hands-on: LLM Usage and Security — vLLM, DsPy, Rebuff, Guardrails
+- Resources: DsPy docs, vLLM docs, Rebuff docs, Guardrails docs
+
+## Week 12 — Course Wrap-up
+- MLOps Course Summary — recap of the full lifecycle
+- Additional Topics in MLOps — what to study next
+- Closing Thoughts — production maturity model, career advice
+- Resources: Replit LLM training, Walmart AI Foundry shipping first apps
+
+## Assessment
+
+- **Weekly graded assignments** (best 9 of 11) — hands-on on GCP — typically 10–20% of grade
+- **OPPE 1** (Online Proctored Programming Exam) — covers weeks 1–5 — Code versioning with GitHub, GCS, Vertex AI Workbench, DVC, Feast, CI with PyTest/CML/GitHub Actions, MLflow tracking
+- **OPPE 2** — covers weeks 4–9 — Docker + Artifact Registry, Kubernetes/GKE deployment, code versioning, experiment tracking, MLSecurityOps, drift, SHAP/LIME, logging, observability, performance monitoring
+- **End Term** — comprehensive MCQ/MSQ over all 12 weeks — pipeline design under business/infra constraints, tool-specific questions, code/script-dependent questions
+- **Bonus 5%** — live session attendance, blog posts on emerging MLOps topics/tools, demonstrating creative use of MLOps in personal projects, helping peers in official channels
+
+## Eligibility
+
+- Average of best 5 out of first 7 weekly assignments ≥ 40/100
+- Attendance in at least one OPPE is mandatory
+
+## Prerequisites (formal)
+
+- BSCS1002 — Programming in Python
+- BSCS2008 — Machine Learning Practice
+
+## Term schedule
+
+The course runs every term of the IIT Madras BS Programme. Recent and upcoming terms: May 2025, Sept 2025, Jan 2026, May 2026, Jan 2027.
+
+## Authoritative URLs
+
+- Course: https://iitmbsmlops.github.io/
+- IIT Madras BS Programme: https://study.iitm.ac.in/ds/
+- IIT Madras: https://www.iitm.ac.in/
+- Discourse: https://discourse.onlinedegree.iitm.ac.in/
+
+## Citation
+
+> *MLOps Course — IIT Madras BS Programme (https://iitmbsmlops.github.io/)*
