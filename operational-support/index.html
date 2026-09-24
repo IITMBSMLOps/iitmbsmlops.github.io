@@ -5,42 +5,193 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Operational Support — IIT Madras MLOps</title>
     <meta name="robots" content="noindex, follow" />
+    <link rel="icon" type="image/png" href="/logo.png" />
+    <!-- No-JS fallback: matches the countdown below -->
     <meta
       http-equiv="refresh"
-      content="0; url=https://gemini.google.com/gem/1YYXYu2TjJvJPvz7H82DvWtowPVBWi6Xn?usp=sharing"
+      content="10; url=https://gemini.google.com/gem/1YYXYu2TjJvJPvz7H82DvWtowPVBWi6Xn?usp=sharing"
     />
     <link
       rel="canonical"
       href="https://gemini.google.com/gem/1YYXYu2TjJvJPvz7H82DvWtowPVBWi6Xn?usp=sharing"
     />
     <style>
+      :root {
+        --blue: #2563eb;
+        --blue-dark: #1d4ed8;
+        --ink: #111827;
+        --muted: #4b5563;
+        --line: #e5e7eb;
+      }
+      * { box-sizing: border-box; }
       body {
         margin: 0;
         min-height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-        background: #f9fafb;
-        color: #374151;
-        text-align: center;
         padding: 16px;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 100%);
+        color: var(--ink);
       }
-      a {
-        color: #2563eb;
+      .card {
+        width: 100%;
+        max-width: 560px;
+        background: #fff;
+        border-radius: 16px;
+        padding: 32px 28px;
+        box-shadow: 0 20px 45px rgba(15, 23, 42, 0.25);
+        text-align: center;
+      }
+      h1 {
+        margin: 0 0 8px;
+        font-size: 22px;
+        font-weight: 700;
+      }
+      .sub {
+        margin: 0 0 24px;
+        font-size: 14px;
+        color: var(--muted);
+      }
+      .notice {
+        text-align: left;
+        background: #fffbeb;
+        border: 1px solid #fde68a;
+        border-radius: 12px;
+        padding: 16px;
+        margin-bottom: 24px;
+      }
+      .notice h2 {
+        margin: 0 0 6px;
+        font-size: 14px;
+        font-weight: 700;
+        color: #92400e;
+      }
+      .notice p {
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.55;
+        color: #78350f;
+      }
+      .notice strong { font-weight: 700; }
+      .count {
+        font-size: 40px;
+        font-weight: 700;
+        color: var(--blue);
+        line-height: 1;
+        margin-bottom: 6px;
+      }
+      .count-label {
+        font-size: 13px;
+        color: var(--muted);
+        margin-bottom: 16px;
+      }
+      .bar {
+        height: 6px;
+        border-radius: 999px;
+        background: var(--line);
+        overflow: hidden;
+        margin-bottom: 24px;
+      }
+      .bar span {
+        display: block;
+        height: 100%;
+        width: 100%;
+        background: var(--blue);
+        transition: width 1s linear;
+      }
+      .actions {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .btn {
+        display: inline-block;
+        padding: 11px 22px;
+        border-radius: 999px;
+        font-size: 14px;
+        font-weight: 600;
+        text-decoration: none;
+        border: 1px solid transparent;
+        cursor: pointer;
+      }
+      .btn-primary { background: var(--blue); color: #fff; }
+      .btn-primary:hover { background: var(--blue-dark); }
+      .btn-ghost { background: #fff; color: var(--muted); border-color: var(--line); }
+      .btn-ghost:hover { background: #f9fafb; }
+      @media (prefers-reduced-motion: reduce) {
+        .bar span { transition: none; }
       }
     </style>
   </head>
   <body>
-    <p>
-      Redirecting to the Operational Support assistant&hellip;<br />
-      If nothing happens,
-      <a href="https://gemini.google.com/gem/1YYXYu2TjJvJPvz7H82DvWtowPVBWi6Xn?usp=sharing">open it here</a>.
-    </p>
+    <main class="card">
+      <h1>Operational Support</h1>
+      <p class="sub">Taking you to the MLOps Operational Support assistant on Google Gemini.</p>
+
+      <div class="notice">
+        <h2>Before you continue</h2>
+        <p>
+          Sign in with your <strong>personal Gmail account</strong>. The assistant is shared
+          as a Gemini Gem, and your IIT Madras student account cannot open it &mdash; you
+          will see a &ldquo;no access&rdquo; or sign-in error if you are logged in with it.
+        </p>
+      </div>
+
+      <div class="count" id="count" aria-live="polite">10</div>
+      <p class="count-label">Redirecting in <span id="unit">seconds</span>&hellip;</p>
+      <div class="bar"><span id="bar"></span></div>
+
+      <div class="actions">
+        <a
+          class="btn btn-primary"
+          id="go"
+          href="https://gemini.google.com/gem/1YYXYu2TjJvJPvz7H82DvWtowPVBWi6Xn?usp=sharing"
+          >Continue now</a
+        >
+        <button class="btn btn-ghost" id="stay" type="button">Stop countdown</button>
+      </div>
+    </main>
+
     <script>
-      window.location.replace(
-        "https://gemini.google.com/gem/1YYXYu2TjJvJPvz7H82DvWtowPVBWi6Xn?usp=sharing"
-      );
+      (function () {
+        var TOTAL = 10;
+        var left = TOTAL;
+        var target = document.getElementById("go").href;
+        var countEl = document.getElementById("count");
+        var unitEl = document.getElementById("unit");
+        var barEl = document.getElementById("bar");
+        var stayEl = document.getElementById("stay");
+
+        // The meta refresh is the no-JS fallback; JS drives the visible countdown.
+        var meta = document.querySelector('meta[http-equiv="refresh"]');
+        if (meta) meta.parentNode.removeChild(meta);
+
+        var timer = setInterval(function () {
+          left -= 1;
+          if (left <= 0) {
+            clearInterval(timer);
+            window.location.replace(target);
+            return;
+          }
+          countEl.textContent = left;
+          unitEl.textContent = left === 1 ? "second" : "seconds";
+          barEl.style.width = (left / TOTAL) * 100 + "%";
+        }, 1000);
+
+        stayEl.addEventListener("click", function () {
+          clearInterval(timer);
+          countEl.textContent = "—";
+          document.querySelector(".count-label").textContent =
+            "Countdown stopped. Use the button when you are ready.";
+          barEl.style.width = "0%";
+          stayEl.disabled = true;
+          stayEl.style.opacity = "0.5";
+          stayEl.style.cursor = "default";
+        });
+      })();
     </script>
   </body>
 </html>
