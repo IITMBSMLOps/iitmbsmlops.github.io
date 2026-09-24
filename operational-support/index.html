@@ -6,11 +6,15 @@
     <title>Operational Support — IIT Madras MLOps</title>
     <meta name="robots" content="noindex, follow" />
     <link rel="icon" type="image/png" href="/logo.png" />
-    <!-- No-JS fallback: matches the countdown below -->
-    <meta
-      http-equiv="refresh"
-      content="10; url=https://gemini.google.com/gem/1YYXYu2TjJvJPvz7H82DvWtowPVBWi6Xn?usp=sharing"
-    />
+    <!-- No-JS fallback. Inside <noscript> so it stays inert when JS runs:
+         a parsed meta refresh cannot be cancelled, which would defeat
+         "Stop countdown". -->
+    <noscript>
+      <meta
+        http-equiv="refresh"
+        content="10; url=https://gemini.google.com/gem/1YYXYu2TjJvJPvz7H82DvWtowPVBWi6Xn?usp=sharing"
+      />
+    </noscript>
     <link
       rel="canonical"
       href="https://gemini.google.com/gem/1YYXYu2TjJvJPvz7H82DvWtowPVBWi6Xn?usp=sharing"
@@ -156,10 +160,6 @@
         var barEl = document.getElementById("bar");
         var stayEl = document.getElementById("stay");
 
-        // The meta refresh is the no-JS fallback; JS drives the visible countdown.
-        var meta = document.querySelector('meta[http-equiv="refresh"]');
-        if (meta) meta.parentNode.removeChild(meta);
-
         var timer = setInterval(function () {
           left -= 1;
           if (left <= 0) {
@@ -176,7 +176,7 @@
           clearInterval(timer);
           countEl.textContent = "—";
           document.querySelector(".count-label").textContent =
-            "Countdown stopped. Use the button when you are ready.";
+            "Countdown stopped. Continue when you\u2019re ready.";
           barEl.style.width = "0%";
           stayEl.disabled = true;
           stayEl.style.opacity = "0.5";
